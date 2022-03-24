@@ -1,0 +1,11 @@
+.cartIcon {
+    size: 3px;
+    max-width: 2%;
+    display: inline;
+    vertical-align: middle;
+}
+.cartCount {
+    size: 3px;
+    display: inline;
+   
+}
