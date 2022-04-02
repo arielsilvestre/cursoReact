@@ -1,6 +1,6 @@
 import './NavBar.css';
 const NavBar = (props) => {
-    console.log(props.name);
+ /*    console.log(props.name); */
     return(
     <div className='navBar'>
             <h2>Nombre De empresa</h2>

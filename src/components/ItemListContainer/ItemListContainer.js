@@ -1,7 +1,7 @@
 import './ItemListContainer.css';
 
 const ItemListContainer = (props) => {
-    console.log(props)
+   /*  console.log(props) */
     return(
         <>
             <h1>{props.greeting}</h1>
