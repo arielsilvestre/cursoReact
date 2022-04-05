@@ -1,0 +1,15 @@
+.tarjeta{
+    background-color:  lightcyan;
+    margin: 5px;
+    display: inline-table;
+}
+.tarjeta h4{
+    color: cadetblue;
+}
+
+.tarjeta button{
+    background-color: cadetblue;
+    border: 3px;
+    border-color: white;
+    color: white;
+}
