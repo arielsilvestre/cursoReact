@@ -1,13 +1,14 @@
 import '../Item/Item.css'
 import ItemCount from '../ItemCount/ItemCount';
 
-const Item = ({nombre,modelo,precio}) => {
+const Item = ({nombre,modelo,precio,imagen}) => {
     const addToCart = (quantity) => {
         quantity++;
         console.log(`Se agregaron ${quantity} productos`);
       }
     return (
         <div className='tarjeta'>
+            <img src={imagen}></img>
             <h4>{nombre}</h4>
             <h6>{modelo}</h6>
             <h6>{precio}</h6>
