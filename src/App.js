@@ -5,6 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter,Routes,Route, Link } from 'react-router-dom';
+import ItemList from './components/ItemList/ItemList';
 
 
 
@@ -25,6 +26,7 @@ const  App = () => {
           <Routes> /** Todo lo que se muestra condicionalmente */
             <Route path='/list' element={<ItemListContainer greeting={"Mensaje de bienvenida"}/>} />
             <Route path='/detail/:productId' element={<ItemDetailContainer/>} />
+            <Route path='category/:productId' element={<ItemListContainer />} />
             <Route path='*' element={<ItemListContainer/>} />
           </Routes>
         </BrowserRouter>

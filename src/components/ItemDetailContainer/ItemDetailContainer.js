@@ -17,6 +17,7 @@ const ItemDetailContainer = () => {
     },[])
 
     return (
+       
         <ItemDetail prod={producto}></ItemDetail>
     ) 
 }

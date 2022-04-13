@@ -1,6 +1,8 @@
 const productos = [
   {
     "id": 1,
+    "categoria": "categoria1",
+    "stock": 10,
     "marca": "Alnylam Pharmaceuticals, Inc.",
     "modelo": "Poaceae",
     "precio": "$193180.86",
@@ -10,6 +12,8 @@ const productos = [
   },
   {
     "id": 2,
+    "categoria": "categoria2",
+    "stock": 66,
     "marca": "Phillips 66 Partners LP",
     "modelo": "Brassicaceae",
     "precio": "$160362.77",
@@ -19,6 +23,8 @@ const productos = [
   },
   {
     "id": 3,
+    "categoria": "categoria3",
+    "stock": 55,
     "marca": "Brown Forman Corporation",
     "modelo": "Araceae",
     "precio": "$149857.76",
@@ -28,6 +34,8 @@ const productos = [
   },
   {
     "id": 4,
+    "categoria": "categoria2",
+    "stock": 50,
     "marca": "Evogene Ltd.",
     "modelo": "Acarosporaceae",
     "precio": "$182785.44",
@@ -37,6 +45,8 @@ const productos = [
   },
   {
     "id": 5,
+    "categoria": "categoria3",
+    "stock": 30,
     "marca": "First Trust Low Duration Opportunities ETF",
     "modelo": "Cyperaceae",
     "precio": "$128967.19",
@@ -46,6 +56,8 @@ const productos = [
   },
   {
     "id": 6,
+    "categoria": "categoria1",
+    "stock": 150,
     "marca": "Daily Journal Corp. (S.C.)",
     "modelo": "Hydrophyllaceae",
     "precio": "$65871.12",
@@ -55,6 +67,8 @@ const productos = [
   },
   {
     "id": 7,
+    "categoria": "categoria1",
+    "stock": 95,
     "marca": "Cars.com Inc.",
     "modelo": "Cactaceae",
     "precio": "$20437.30",
@@ -64,6 +78,8 @@ const productos = [
   },
   {
     "id": 8,
+    "categoria": "categoria2",
+    "stock": 66,
     "marca": "EVINE Live Inc.",
     "modelo": "Frankeniaceae",
     "precio": "$134308.52",
@@ -73,6 +89,8 @@ const productos = [
   },
   {
     "id": 9,
+    "categoria": "categoria4",
+    "stock": 65,
     "marca": "Highland Funds I",
     "modelo": "Liliaceae",
     "precio": "$18744.01",
@@ -82,6 +100,8 @@ const productos = [
   },
   {
     "id": 10,
+    "categoria": "categoria3",
+    "stock": 50,
     "marca": "Pearson, Plc",
     "modelo": "Araliaceae",
     "precio": "$49487.28",
@@ -91,6 +111,8 @@ const productos = [
   },
   {
     "id": 11,
+    "categoria": "categoria2",
+    "stock": 35,
     "marca": "BlackRock Municipal Income Trust",
     "modelo": "Scrophulariaceae",
     "precio": "$164009.49",
@@ -100,6 +122,8 @@ const productos = [
   },
   {
     "id": 12,
+    "categoria": "categoria2",
+    "stock": 150,
     "marca": "NetScout Systems, Inc.",
     "modelo": "Opegraphaceae",
     "precio": "$112058.81",
@@ -109,6 +133,8 @@ const productos = [
   },
   {
     "id": 13,
+    "categoria": "categoria1",
+    "stock": 15,
     "marca": "Shinhan Financial Group Co Ltd",
     "modelo": "Asteraceae",
     "precio": "$93694.17",
@@ -118,6 +144,8 @@ const productos = [
   },
   {
     "id": 14,
+    "categoria": "categoria3",
+    "stock": 25,
     "marca": "Jones Energy, Inc.",
     "modelo": "Apiaceae",
     "precio": "$119247.00",
@@ -126,7 +154,9 @@ const productos = [
     "imagen": "http://dummyimage.com/150x100.png/cc0000/ffffff"
   },
   {
-    "id": 15,
+    "id": 20,
+    "categoria": "categoria2",
+    "stock": 50,
     "marca": "Sociedad Quimica y Minera S.A.",
     "modelo": "Valerianaceae",
     "precio": "$91207.49",
@@ -136,6 +166,8 @@ const productos = [
   },
   {
     "id": 16,
+    "categoria": "categoria1",
+    "stock": 5,
     "marca": "Gener8 Maritime, Inc.",
     "modelo": "Caryophyllaceae",
     "precio": "$113375.70",
@@ -145,6 +177,8 @@ const productos = [
   },
   {
     "id": 17,
+    "categoria": "categoria2",
+    "stock": 2,
     "marca": "Vanguard Russell 3000 ETF",
     "modelo": "Cupressaceae",
     "precio": "$20337.28",
@@ -154,6 +188,8 @@ const productos = [
   },
   {
     "id": 18,
+    "categoria": "categoria3",
+    "stock": 90,
     "marca": "WSFS Financial Corporation",
     "modelo": "Poaceae",
     "precio": "$195433.17",
@@ -163,6 +199,8 @@ const productos = [
   },
   {
     "id": 19,
+    "categoria": "categoria3",
+    "stock": 50,
     "marca": "USG Corporation",
     "modelo": "Fabaceae",
     "precio": "$74145.85",
@@ -170,25 +208,43 @@ const productos = [
     "descripcion": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
     "imagen": "http://dummyimage.com/186x100.png/ff4444/ffffff"
   },
-  {
+/*   {
     "id": 20,
+    "categoria": "categoria2",
+    "stock": 10,
     "marca": "Royal Bancshares of Pennsylvania, Inc.",
     "modelo": "Crassulaceae",
     "precio": "$57141.43",
     "color": "Mauv",
     "descripcion": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
     "imagen": "http://dummyimage.com/118x100.png/cc0000/ffffff"
-  }
+  } */
 ]
 
+const categorias = [
+  {id:'categoria1', description: 'categoria 1'},
+  {id:'categoria2', description: 'categoria 2'},
+  {id:'categoria3', description: 'categoria 3'},
+  {id:'categoria4', description: 'categoria 4'},
+]
 
-export const getProductos = () => {
-return new Promise((resolve) => {
-  setTimeout(() => {
-    resolve(productos);
-  }, 500);
-});
+export const getCategories = () => {
+  return new Promise ( resolve => {
+    setTimeout( () => {
+      resolve(categorias)
+    },500)
+  })
+}
+
+export const getProductos = (categoryId) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(categoryId ? productos.filter(prod => prod.categoria === categoryId) : productos);
+    }, 500);
+  });
 };
+
+  
 
 export const getProductosById= (id) => {
   return new Promise((resolve) => {

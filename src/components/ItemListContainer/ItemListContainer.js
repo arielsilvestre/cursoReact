@@ -2,16 +2,22 @@ import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList'
 import { getProductos } from '../recursos';
 import {useState,useEffect} from 'react';
+import {useParams} from 'react-router-dom'
 
 const ItemListContainer = (props) => {
     const [productos,setProductos] = useState([]);
 
+    const {productId} = useParams()
+    /* console.log(productId) */
+    
+
+
     useEffect(() => {
-        getProductos().then(prods => {
+        getProductos(productId).then(prods => {
             setProductos(prods)
             /* console.log(prods); */
         })
-    },[])
+    },[productId])
  
    return(
         <>
