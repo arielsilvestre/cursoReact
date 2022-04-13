@@ -186,14 +186,14 @@ export const getProductos = () => {
 return new Promise((resolve) => {
   setTimeout(() => {
     resolve(productos);
-  }, 2000);
+  }, 500);
 });
 };
 
 export const getProductosById= (id) => {
   return new Promise((resolve) => {
       setTimeout(()=> {
-          resolve(productos.find(prod => prod.id === id));
-      },2000);
+          resolve(productos.find(prod => prod.id == id));
+      },500);
   })
 }

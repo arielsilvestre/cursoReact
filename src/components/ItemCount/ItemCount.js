@@ -13,13 +13,25 @@ const ItemCount = ({stock,initial,onAdd}) => {
             alert("no hay stock disponible");
         }
       }
+    const removeToCart = (count) => {
+        if(count > 0){
+            setCount(count = count-1)
+            console.log(count);
+        }
+        else
+        {
+            alert("no hay más articulos de este tipo en tu carrito");
+        }
+      }
     
     return (
         <>
             <div>
                 <p>Contador</p>
                 <p>{count}</p>
-                <button onClick={() => addToCart(count)}> Agregar al Carrito </button>
+                <button onClick={() => removeToCart(count)}> - </button>
+                {/* <button onClick={() => addToCart(count)}> Ver detalle </button> */}
+                <button onClick={() => addToCart(count)}> + </button>
             </div>
         </>
     )

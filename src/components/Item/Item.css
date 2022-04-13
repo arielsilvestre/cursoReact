@@ -2,6 +2,8 @@
     background-color:  lightcyan;
     margin: 5px;
     display: inline-table;
+    width: 300px;
+    margin-bottom: 20px;
 }
 .tarjeta h4{
     color: cadetblue;
@@ -12,4 +14,15 @@
     border: 3px;
     border-color: white;
     color: white;
+}
+
+.boton {
+    background-color: #5F9EA0;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 4px;
+
+
 }

@@ -9,7 +9,7 @@ const ItemListContainer = (props) => {
     useEffect(() => {
         getProductos().then(prods => {
             setProductos(prods)
-            console.log(prods);
+            /* console.log(prods); */
         })
     },[])
  
