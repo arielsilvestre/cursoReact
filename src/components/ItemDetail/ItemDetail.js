@@ -1,20 +1,22 @@
 import ItemCount from '../ItemCount/ItemCount'
 import { useState,useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Context } from '../../App';
+import CartContext from '../../context/CartContext';
 
 
-const ItemDetail = ({prod, id, nombre, precio, modelo,stock}) => {
+const ItemDetail = ({id,marca,imagen, precio, modelo,stock}) => {
     const [quantity,setQuantity] = useState(0)
-    const {cart, setCart} = useContext(Context)
+    const {addItem, isInCart} = useContext(CartContext);
+
 
     const agregar = (count) => {
-        setQuantity(count)
-        console.log("hola "+count)
+        /* setQuantity(count) */
         
-        /* const productObj = {
-            id, nombre, precio
-        }  */
+         const productObj = {
+            id, marca,modelo,precio, quantity: count
+        } 
+
+        addItem(productObj)
     }
 
     console.log()
@@ -22,17 +24,17 @@ const ItemDetail = ({prod, id, nombre, precio, modelo,stock}) => {
     return ( 
         <>
             <div>
-                <img src={prod.imagen} />
+                <img src={imagen} />
             </div>
             <div>
-                <h3>Detalles del producto {prod.nombre}</h3>
-                <h4>{prod.marca}</h4>
-                <h6>Modelo: {prod.modelo}</h6>
+                <h3>Detalles del producto</h3>
+                <h4>{marca}</h4>
+                <h6>Modelo: {modelo}</h6>
                 
-                <h6>Precio: {prod.precio}</h6>
-                 {quantity > 0 ? 
+                <h6>Precio: {precio}</h6>
+                 {isInCart(id) > 0 ? 
                     <Link to='/cart'> Ir al carrito </Link> : 
-                    <ItemCount stock={prod.stock}  initial = {0} onAdd={agregar}> 
+                    <ItemCount stock={stock}  initial = {0} onAdd={agregar}> 
                         Agregar al carrito 
                     </ItemCount>
                  } 

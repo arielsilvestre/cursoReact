@@ -7,7 +7,6 @@ const ItemCount = ({stock,initial,onAdd}) => {
     const addToCart = (count) => {
         if(count < stock){
             setCount(count = count+1)
-            console.log(count)
         }
         else
         {
@@ -17,7 +16,6 @@ const ItemCount = ({stock,initial,onAdd}) => {
     const removeToCart = (count) => {
         if(count > 0){
             setCount(count = count-1)
-            console.log(count);
         }
         else
         { 

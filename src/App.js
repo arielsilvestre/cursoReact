@@ -7,20 +7,22 @@ import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter,Routes,Route, Link } from 'react-router-dom';
 import ItemList from './components/ItemList/ItemList';
 import CartContext from './context/CartContext';
+import { CartContextProvider } from './context/CartContext';
 import {createContext, useState} from 'react'
 
 
 export const Context = createContext();
 
 const  App = () => {
-  const [cart,setCart] = useState([])
+/*   const [cart,setCart] = useState([])
   console.log(cart);
-
+ */
 
   return (
     <div className="App">
       <header>
-        <Context.Provider value={{cart,setCart}}>
+       {/*  <Context.Provider value={{cart,setCart}}> */}
+       <CartContextProvider>
           <BrowserRouter>
             <NavBar name={"hola"}>
                 <CartWidget />
@@ -36,7 +38,8 @@ const  App = () => {
               <Route path='*' element={<ItemListContainer/>} />
             </Routes>
           </BrowserRouter>
-        </Context.Provider>
+        </CartContextProvider>
+       {/*  </Context.Provider> */}
       </header>
       
       {/*  <ItemListContainer greeting="hola juan carlos" /> */}

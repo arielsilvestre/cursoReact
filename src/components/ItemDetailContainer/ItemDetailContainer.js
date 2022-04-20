@@ -7,8 +7,8 @@ const ItemDetailContainer = () => {
     const [producto,setProducto] = useState([]);
 
     const {productId} = useParams()
-   /*  console.log(productId) */
-
+    /* console.log(producto)
+ */
     useEffect(() => {
         getProductosById(productId).then(prod => {
             setProducto(prod)
@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
 
     return (
        
-        <ItemDetail prod={producto} ></ItemDetail>
+        <ItemDetail {...producto} ></ItemDetail>
     ) 
 }
 
