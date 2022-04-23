@@ -19,7 +19,6 @@ const ItemDetail = ({id,marca,imagen, precio, modelo,stock}) => {
         addItem(productObj)
     }
 
-    console.log()
 
     return ( 
         <>

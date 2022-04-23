@@ -9,6 +9,7 @@ import ItemList from './components/ItemList/ItemList';
 import CartContext from './context/CartContext';
 import { CartContextProvider } from './context/CartContext';
 import {createContext, useState} from 'react'
+import Cart from './components/Cart/Cart';
 
 
 export const Context = createContext();
@@ -25,7 +26,7 @@ const  App = () => {
        <CartContextProvider>
           <BrowserRouter>
             <NavBar name={"hola"}>
-                <CartWidget />
+                {/* <CartWidget /> */}
             </NavBar>
           {/*  <div>
               <Link to='/list'><button>Lista</button></Link>
@@ -36,6 +37,7 @@ const  App = () => {
               <Route path='/detail/:productId' element={<ItemDetailContainer/>} />
               <Route path='category/:productId' element={<ItemListContainer />} />
               <Route path='*' element={<ItemListContainer/>} />
+              <Route path='/cart' element={<Cart />} />
             </Routes>
           </BrowserRouter>
         </CartContextProvider>
