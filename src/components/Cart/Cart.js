@@ -53,10 +53,14 @@ const Cart = () => {
 
     const createOrder = () => {
         const objUser = {
-            nombre: 'pepito',
-            tel: '12345',
-            email: 'pepito@gomez.com',
-            date: Timestamp.fromDate(new Date())
+            Buyer : {
+                nombre: 'pepito',
+                tel: '12345',
+                email: 'pepito@gomez.com',
+            },
+            itemsUser : cart.map(prod => prod),
+            date: Timestamp.fromDate(new Date()),
+            total: getTotal()
         }
         const ids = cart.map(prod => prod.id)
 
