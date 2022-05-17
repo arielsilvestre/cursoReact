@@ -22,3 +22,6 @@
 - Index.js
 - ItemDetailContainer
 - recursos.js
+
+#Gif con procedimiento de compra de Items
+[![N|Solid](https://www.dropbox.com/s/pc1yk9sr4y57khz/Recording%202022-05-17%20at%2018.57.43.gif?dl=0)](https://github.com/arielsilvestre/cursoReact/tree/EntregaFinal)
