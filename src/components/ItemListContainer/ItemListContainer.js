@@ -24,7 +24,7 @@ const ItemListContainer = (props) => {
         : collection(firestoreDb,'productos') 
 
         getDocs(coleccionRef).then(response=> {
-            console.log(response);
+            /* console.log(response); */
             const productos = response.docs.map(doc=>{
                 return {id:doc.id, ...doc.data()}
             });

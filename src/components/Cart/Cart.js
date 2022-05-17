@@ -10,6 +10,8 @@ import { firestoreDb } from '../../services/firebase';
 const Cart = () => {
     console.log()
     const {addItem, isInCart,getQuantity, cart,removeItem,getTotal} = useContext(CartContext);
+    const [form,setForm] = useState(false);
+    const [userOrder,setUserOrder] = useState({})
 
     const objOrder = {
         items: cart,
@@ -22,6 +24,7 @@ const Cart = () => {
         date: new Date()
     }
 
+    
     const addDocToCollection = () => {
         const collectionRef = collection(firestoreDb,'unaColecciónQueNoExiste')
         const objUser = {
@@ -30,33 +33,64 @@ const Cart = () => {
             email: 'pepito@gomez.com',
             date: Timestamp.fromDate(new Date())
         }
-
+        
         addDoc(collectionRef,objUser).then(response=>{
             console.log(">>"+response.id)
         })
     }
-
+    
     const updateDocFromCollection = () => {
         const id = 'mUAYr5vqfkxFjj2SgCrc'
-
+        
         const docRef = doc(firestoreDb, 'unaColecciónQueNoExiste',id)
-
+        
         const fieldToUpdate = {
             name: 'Brad Goodman',
             date: Timestamp.fromDate(new Date())
         }
-
+        
         updateDoc(docRef,fieldToUpdate).then(response=>{
             console.log(response)
         })
     }
+    
+    const mostrarUsuario = () => {
+       
+        console.log(userOrder);
+    }
+    const mostrarForm = () => {
+        setForm(true);
+    }
+    const handleNombreChanged = (event) => {
+       
+        userOrder.nombre = event.target.value
+        console.log(userOrder)
+      }
+    const handleApellidoChanged = (event) => {
+      
+        userOrder.apellido = event.target.value
+        console.log(userOrder)
+      }
+    const handleTelefonoChanged = (event) => {
+       
+        userOrder.telefono = event.target.value
+        console.log(userOrder)
+      }
+    const handleEmailChanged = (event) => {
+     
+        userOrder.email = event.target.value
+        console.log(userOrder)
+      }
 
-    const createOrder = () => {
+    
+
+    const createOrder = (userOrder) => {
         const objUser = {
             Buyer : {
-                nombre: 'pepito',
-                tel: '12345',
-                email: 'pepito@gomez.com',
+                nombre: userOrder.nombre,
+                apellido: userOrder.apellido,
+                tel: userOrder.telefono,
+                email: userOrder.email
             },
             itemsUser : cart.map(prod => prod),
             date: Timestamp.fromDate(new Date()),
@@ -91,13 +125,9 @@ const Cart = () => {
             } else{
 
             }
-        }).then(()=>{
-
         })
 
-
-
-        /* getDocs() */
+       /*  localStorage.setItem(localStorage.length+1, objUser) */
     }
 
     return (
@@ -125,10 +155,40 @@ const Cart = () => {
                 <td>Total </td>            
                 <td>${getTotal()}</td>
             </tr>
-            <td><button onClick={() => updateDocFromCollection()}> Actualizar documento </button></td>
-            <td><button onClick={() => addDocToCollection()}> addDocToCollection </button></td>
-            <td><button onClick={() => createOrder()}> generar orden </button></td>
-        </div>
+           {/*  <td><button onClick={() => updateDocFromCollection()}> Actualizar documento </button></td>
+            <td><button onClick={() => addDocToCollection()}> addDocToCollection </button></td> */}
+            {/* <td><button onClick={() => createOrder()}> generar orden </button></td> */}
+            <td><button onClick={() => mostrarForm()}> Generar orden </button></td>
+       
+
+        <section>
+            <div>
+                {form && cart.length>0 ? 
+                    <div>
+                    <h2>Ingresa tus datos para finalizar</h2> 
+                        <div>
+                        <form>
+                            
+                            <label>Nombre: <br /> <input type="text" name="nombre" placeholder="Ingrese su nombre..." onChange={handleNombreChanged.bind(this)} /> </label> <br />
+                            <label> Apellido  <br />
+                            <input type="text" name="apellido" onChange={handleApellidoChanged.bind(this)}/> </label>  <br />
+                            <label> Telefono: <br /> 
+                            <input type="text" name="telefono" onChange={handleTelefonoChanged.bind(this)}/></label>  <br />
+                            <label> email: <br />
+                            <input type="text" name="email" onChange={handleEmailChanged.bind(this)} /></label>  <br />
+                            <label> confirmar email:  <br />
+                            <input type="text" name="emailValidator" onChange={event => event.target.value} /></label> <br />
+                            
+                            <button onClick={createOrder(userOrder)}>Comprar</button>
+                        </form>
+                        
+                        </div>  
+                    </div>
+                : 
+                ''}
+            </div>
+        </section>
+    </div>
     )
 }
 

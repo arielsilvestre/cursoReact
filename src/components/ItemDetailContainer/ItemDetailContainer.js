@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
             setProducto(prod)
         }) */
         getDoc(doc(firestoreDb,'productos',productId)).then(response=>{
-            console.log(response)
+            /* console.log(response) */
             const producto = {id: response.id , ...response.data()}
             setProducto(producto)
         })
